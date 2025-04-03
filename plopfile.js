@@ -26,6 +26,12 @@ module.exports = function (plop) {
           'src/app/components/{{properCase name}}/{{properCase name}}.stories.tsx',
         templateFile: 'src/plop/components/component.stories.hbs',
       },
+      {
+        type: 'add',
+        path:
+          'src/app/components/{{properCase name}}/{{properCase name}}.test.tsx',
+        templateFile: 'src/plop/components/component.test.hbs',
+      },
     ],
   });
 };
