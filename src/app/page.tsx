@@ -2,10 +2,10 @@ import Image from 'next/image';
 import ArtworkGrid from './components/ArtworkGrid/ArtworkGrid';
 
 export type minArtworkData = {
-  id: number;
+  id: string | number;
   title: string;
   image_id: string | null;
-  thumbnail: object;
+  thumbnail: unknown;
 };
 
 export default async function Home() {
