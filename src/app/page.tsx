@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ArtworkGrid from './components/ArtworkGrid/ArtworkGrid';
 
 export default async function Home() {
@@ -7,7 +8,10 @@ export default async function Home() {
 
   return (
     <main className="p-6">
-      <h1 className="text-3xl font-bold mb-6">Artworks</h1>
+      <>
+        <Image alt="palette" src="/palette.png" width={100} height={100} />
+        <h1 className="text-3xl font-bold mb-6">Artworks from The Art Institute of Chicago API</h1>
+      </>
       <ArtworkGrid artworks={chicagoArtworks} />
     </main>
   );
