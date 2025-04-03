@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { Key } from 'react';
 
-type Artwork = {
+export type Artwork = {
   id: Key;
   title: string;
   thumbnail: {
@@ -14,7 +14,11 @@ type Artwork = {
   } | null;
 };
 
-export default function ArtworkGrid({ artworks }: { artworks: Artwork[] }) {
+export type ArtworkGridProps = {
+  artworks: Artwork[];
+};
+
+export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {artworks.map((artwork) => (
