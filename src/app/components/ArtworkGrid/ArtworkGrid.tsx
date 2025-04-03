@@ -1,21 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
-import { Key } from 'react';
-
-export type Artwork = {
-  id: Key;
-  title: string;
-  thumbnail: {
-    lqip: string | StaticImport;
-    width: number;
-    height: number;
-  } | null;
-};
+import { minArtworkData } from '@/app/page';
 
 export type ArtworkGridProps = {
-  artworks: Artwork[];
+  artworks:  minArtworkData[];
 };
 
 export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
@@ -27,12 +16,12 @@ export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
           className="rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition duration-300 p-2 text-left"
           onClick={() => alert(`Clicked on "${artwork.title}"`)}
         >
-          {artwork.thumbnail?.lqip && (
+          {artwork.image_id && (
             <Image
               alt={artwork.title}
-              src={artwork.thumbnail.lqip}
+              src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
               width={200}
-              height={Math.floor((artwork.thumbnail.height / artwork.thumbnail.width) * 200)}
+              height={250}
               className="rounded mb-2"
             />
           )}

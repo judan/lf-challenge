@@ -11,7 +11,12 @@ const nextConfig: NextConfig = {
       {
         protocol: 'https',
         hostname: 'placehold.co',
-        pathname: '/**', // allow any image path from placehold.co
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.artic.edu',
+        pathname: '/**',
       },
     ],
   },
