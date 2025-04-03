@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'api.artic.edu',
         pathname: '/api/v1/artworks/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**', // allow any image path from placehold.co
+      },
     ],
   },
 };
