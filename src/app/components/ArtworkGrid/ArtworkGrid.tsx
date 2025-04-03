@@ -16,16 +16,19 @@ export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
           className="rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition duration-300 p-2 text-left"
           onClick={() => alert(`Clicked on "${artwork.title}"`)}
         >
-          {artwork.image_id && (
-            <Image
-              alt={artwork.title}
-              src={`https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`}
-              width={200}
-              height={250}
-              className="rounded mb-2"
-            />
-          )}
+          <Image
+            alt={artwork.title}
+            src={
+              !artwork?.image_id
+                ? '/palette.png'
+                : `https://www.artic.edu/iiif/2/${artwork.image_id}/full/843,/0/default.jpg`
+            }
+            width={400}
+            height={300}
+            className="rounded mb-2"
+          />
           <h2 className="text-sm font-medium">{artwork.title}</h2>
+          <h3>{artwork.image_id || 'null'}</h3>
         </button>
       ))}
     </div>
