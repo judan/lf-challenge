@@ -1,0 +1,18 @@
+import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
+import {{properCase name}} from './{{properCase name}}';
+import type { {{properCase name}}Props } from './{{properCase name}}';
+import { describe, it, expect } from 'vitest';
+
+const mocks: {{properCase name}}[] = [
+  {},
+  {},
+];
+
+describe('{{properCase name}}', () => {
+  it('renders', () => {
+    render(<{{properCase name}} />);
+
+    expect(screen.getByText('test')).toBeInTheDocument();
+  });
+});
