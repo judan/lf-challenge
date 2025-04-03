@@ -1,4 +1,8 @@
-# This Project Uses
+# In This Project
+
+This repo is a solution to the [LF Code Challenge](./code-challenge.mdx).
+
+It uses:
 
 - [React](https://react.dev/)
 - [Typescript](https://www.typescriptlang.org/)
