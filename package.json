@@ -15,6 +15,7 @@
   "dependencies": {
     "@babel/traverse": "^7.27.0",
     "@storybook/nextjs": "^8.6.12",
+    "@storybook/react-vite": "^8.6.12",
     "@testing-library/user-event": "^14.6.1",
     "@vitejs/plugin-react": "^4.3.4",
     "next": "15.2.4",

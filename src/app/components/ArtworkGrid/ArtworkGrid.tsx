@@ -1,16 +1,17 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { minArtworkData } from '@/app/page';
 import ClockLoader from "react-spinners/ClipLoader";
 import { useState } from 'react';
+import { useClientRouter } from '@/hooks/useClientRouter';
+
 
 export type ArtworkGridProps = {
   artworks:  minArtworkData[];
 };
 
 export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
-  const router = useRouter();
+  const router = useClientRouter();
   const [loading, setLoading] = useState(false);
 
   const handleClick = async (id: string | number) => {

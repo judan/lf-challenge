@@ -3,7 +3,6 @@ import ArtworkDetail, { ArtworkDetailProps } from './ArtworkDetail';
 
 const meta: Meta<typeof ArtworkDetail> = {
   component: ArtworkDetail,
-  title: 'Components/ArtworkDetail',
 };
 
 export default meta;
