@@ -13,7 +13,7 @@ const mockArtwork: ArtworkDetailProps = {
   title: 'Starry Night',
   artist_display: 'Vincent van Gogh\nDutch, 1853–1890',
   date_display: '1889',
-  image_id: 'd8c27a5a-c294-dc1d-60bb-4a3d7c4a6b5b',
+  image_id: '',
   place_of_origin: 'Netherlands',
   medium_display: 'Oil on canvas',
   dimensions: '73.7 x 92.1 cm',
@@ -26,13 +26,5 @@ const mockArtwork: ArtworkDetailProps = {
 export const Primary: Story = {
   args: {
     ...mockArtwork,
-  },
-};
-
-export const MissingImage: Story = {
-  args: {
-    ...mockArtwork,
-    image_id: null,
-    title: 'Untitled (No Image Available)',
   },
 };
