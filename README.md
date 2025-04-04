@@ -10,6 +10,7 @@ It uses:
 - [Storybook](https://storybook.js.org/)
 - [Vitest](https://vitest.dev/)
 - [Plop](https://www.npmjs.com/package/plop)
+- [React Spinners](https://www.npmjs.com/package/react-spinners)
 
 ## Running the App
 

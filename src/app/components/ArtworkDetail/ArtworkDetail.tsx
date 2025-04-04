@@ -48,6 +48,7 @@ export default function ArtworkDetail(props: ArtworkDetailProps) {
       </div>
       <div className="mb-6">
         <Image
+          loading="lazy"
           src={imageUrl}
           alt={thumbnail?.alt_text || title}
           width={843}
