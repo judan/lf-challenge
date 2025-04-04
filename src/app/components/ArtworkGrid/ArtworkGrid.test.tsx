@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { userEvent } from '@testing-library/user-event';
-import { vi, describe, it, expect } from 'vitest';
+import { vi, describe, it, expect, beforeEach } from 'vitest';
 import ArtworkGrid from './ArtworkGrid';
 import { minArtworkData } from '@/app/page';
 
@@ -37,6 +37,10 @@ const mockArtworks: minArtworkData[] = [
 ];
 
 describe('ArtworkGrid', () => {
+  beforeEach(() => {
+    mockPush.mockReset();
+  });
+  
   it('renders artwork titles', () => {
     render(<ArtworkGrid artworks={mockArtworks} />);
 
@@ -72,13 +76,15 @@ describe('ArtworkGrid', () => {
     });
 
     it('routes to the artwork detail page on click', async () => {
-        render(<ArtworkGrid artworks={mockArtworks} />);    
-        const artworkButton = screen.getByLabelText(/Mona Lisa/)
-        const user = userEvent.setup();
-    
-        expect(artworkButton).toBeInTheDocument();
-    
-        await user.click(artworkButton);
+      render(<ArtworkGrid artworks={mockArtworks} />);    
+      const artworkButton = screen.getByLabelText(/Mona Lisa/)
+      const user = userEvent.setup();
+  
+      expect(artworkButton).toBeInTheDocument();
+  
+      await user.click(artworkButton);
+      await waitFor(() => {
         expect(mockPush).toHaveBeenCalledWith('/artwork/1')
       });
+    });
 });

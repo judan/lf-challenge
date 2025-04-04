@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { minArtworkData } from '@/app/page';
 import ClockLoader from "react-spinners/ClipLoader";
 import { useState } from 'react';
-import { useClientRouter } from '@/hooks/useClientRouter';
+import { useClientRouter } from '../../hooks/useClientRouter';
 
 
 export type ArtworkGridProps = {
