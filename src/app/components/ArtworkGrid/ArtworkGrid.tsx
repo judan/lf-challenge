@@ -15,6 +15,7 @@ export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       {artworks.map((artwork) => (
         <button
+          aria-label={artwork.title}
           key={artwork.id}
           className="rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition duration-300 p-2 text-left"
           onClick={() => router.push(`/artwork/${artwork.id}`)}
