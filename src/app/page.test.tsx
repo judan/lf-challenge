@@ -2,7 +2,7 @@ import { beforeAll, describe, expect, expectTypeOf, test } from 'vitest';
 
 const timeout = 30000;
 
-describe('Request Earth Polychromatic Imaging Camera', () => {
+describe('Request First Page of Artworks from Art Institute of Chicago', () => {
   let response: Response;
   let body: Array<{ [key: string]: unknown }>;
 
