@@ -7,6 +7,7 @@ It uses:
 - [React](https://react.dev/)
 - [Typescript](https://www.typescriptlang.org/)
 - [NextJS](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com/)
 - [Storybook](https://storybook.js.org/)
 - [Vitest](https://vitest.dev/)
 - [Plop](https://www.npmjs.com/package/plop)

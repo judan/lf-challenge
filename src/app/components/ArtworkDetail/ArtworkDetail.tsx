@@ -39,7 +39,7 @@ export default function ArtworkDetail(props: ArtworkDetailProps) {
       <div className="mb-6">
         <Link href="/">
           <button
-            className="flex items-center space-x-2 text-sm text-white-700 hover:underline"
+            className="flex items-center space-x-2 text-sm text-white-700 hover:underline cursor-pointer"
           >
             <Image alt="back" width={20} height={20} src="/icons8-back-26.png" />
             <span>Back to Home</span>

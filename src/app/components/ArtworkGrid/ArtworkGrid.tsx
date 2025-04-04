@@ -31,7 +31,7 @@ export default function ArtworkGrid({ artworks }: ArtworkGridProps) {
             <button
               aria-label={artwork.title}
               key={artwork.id}
-              className="rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition duration-300 p-2 text-left"
+              className="rounded-lg shadow-md border border-gray-200 hover:shadow-xl transition duration-300 p-2 text-left cursor-pointer"
               onClick={() => handleClick(artwork.id)}
             >
               <Image
