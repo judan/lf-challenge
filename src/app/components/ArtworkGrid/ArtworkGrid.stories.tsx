@@ -1,23 +1,20 @@
+'use client'
 import type { Meta, StoryObj } from '@storybook/react';
 import ArtworkGrid from './ArtworkGrid';
-import { MockNextRouter } from '../../../../.storybook/mockRouter';
+import {
+	AppRouterContext,
+	type AppRouterInstance,
+} from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
 const meta: Meta<typeof ArtworkGrid> = {
   component: ArtworkGrid,
   decorators: [
-    (Story) => (
-      <MockNextRouter
-        mockRouter={{
-          push: (url: string) => {
-            console.log('Mock push to', url);
-            return Promise.resolve(true);
-          },
-        }}
-      >
-        <Story />
-      </MockNextRouter>
-    ),
-  ],
+		(Story) => (
+			<AppRouterContext.Provider value={{} as AppRouterInstance}>
+				<Story />
+			</AppRouterContext.Provider>
+		),
+	],
 };
 
 export default meta;
